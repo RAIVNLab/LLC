@@ -1,1 +1,1 @@
-Codebase for **LLC: Accurate, Multi-purpose LearntLow-dimensional Binary Codes** coming soon.
+Codebase for **LLC: Accurate, Multi-purpose Learnt Low-dimensional Binary Codes** coming soon.
