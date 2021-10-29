@@ -56,8 +56,9 @@ We provide the ``20-bit`` model trained with ResNet50 backbon on ImageNet-1K acc
 
 The Class Code Evaluation of the provided pretrained model and codebook should give a top-1 accuracy of ``75.5%``. While the Instance Code Evaluation using ``MHD`` (Minimum Hamming Distance) gives ``74.5%`` and using ``ED`` (Exact Decoding) gives ``68.9%``
 
-ResNet50 pretrained backbone projecting to 20 dim space - [R50 Pretrained Backbone]()
-Learnt 20-bit codebook - [20-bit Codebook]()
+``ResNet50 pretrained backbone projecting to 20 dim space`` - [R50 Pretrained Backbone](https://drive.google.com/file/d/1iAhEKsiT542QXjs3CAxnpE7GhhTvTbfA/view?usp=sharing)
+
+``Learnt 20-bit codebook`` - [20-bit Codebook](https://drive.google.com/file/d/1s0ezOsdMCfZUvjgp4oCvxtgVQbn5YSST/view?usp=sharing)
 
 Note that the codebook is stored with the underlying real-values. We recommend people store it this way and binarize the codebook to ``+1/-1`` for usage in LLC.
 
