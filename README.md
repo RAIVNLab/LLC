@@ -16,7 +16,7 @@ To run the ImageNet experiments there must be a folder `<data-dir>/imagenet`
 that contains the ImageNet `train` and `val` folders that contains images of each class in a seperate folder.
 
 ## Training
-This codebase contains model architecture for [ResNet50](models/resnet.py#L190) and support to train them on ImageNet-1K (other model architectures can be added to the same file for ease of utilization). We have provided some `config` files for training [ResNet50](models/resnet.py#L161) which can be modified for other architectures and datasets. To support more datasets, please add new dataloaders to [`data`](data/) folder.
+This codebase contains model architecture for [ResNet50](models/resnet.py#L190) and support to train them on ImageNet-1K (other model architectures can be added to the same file for ease of utilization). We have provided some `config` files for training ResNet50 which can be modified for other architectures and datasets. To support more datasets, please add new dataloaders to [`data`](data/) folder.
 
 Training across multiple GPUs is supported, however, the user should check the minimum number of GPUs required to scale ImageNet-1K. 
 
