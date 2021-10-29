@@ -1,4 +1,4 @@
-# [Soft Threshold Weight Reparameterization for Learnable Sparsity](https://arxiv.org/abs/2106.01487)
+# [LLC: Accurate, Multi-purpose Learnt Low-dimensional Binary Codes](https://arxiv.org/abs/2106.01487)
 [Aditya Kusupati](http://www.adityakusupati.com/), [Matthew Wallingford](https://mattwallingford.github.io/), [Vivek Ramanujan](https://vkramanuj.github.io/), [Raghav Somani](http://raghavsomani.github.io/), [Jae Sung Park](https://homes.cs.washington.edu/~jspark96/), [Krishna Pillutla](https://krishnap25.github.io/), [Prateek Jain](http://www.prateekjain.org/), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/)
 
 This repository contains code for the ImageNet-1K classification experiments presented in the NeurIPS 2021 [paper](https://arxiv.org/abs/2106.01487) along with more functionalities.
