@@ -1,0 +1,40 @@
+# Architecture
+arch: ResNet50
+
+# ===== Dataset ===== #
+data: /mnt/data/
+set: ImageNet
+name: 20bit_codebook_learning_IN
+
+# ===== Learning Rate Policy ======== #
+optimizer: sgd
+lr: 0.1
+lr_policy: cosine_lr
+warmup_length: 0
+
+# ===== Network training config ===== #
+epochs: 100
+weight_decay: 0.000030517578125
+momentum: 0.875
+batch_size: 256
+label_smoothing: 0.1
+num_classes: 1000
+
+# ====== The codebook size ===== #
+num_bits: 20
+
+# Codebook Learning
+instance_code: False
+
+# ===== Warmstart codebook ==== #
+load_codebook: random
+
+# ===== Sparsity =========== #
+conv_type: DenseConv
+bn_type: LearnedBatchNorm
+init: kaiming_normal
+mode: fan_in
+nonlinearity: relu
+
+# ===== Hardware setup ===== #
+workers: 12
