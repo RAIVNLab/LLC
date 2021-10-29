@@ -24,15 +24,15 @@ Training across multiple GPUs is supported, however, the user should check the m
 
 We support naive codebook learning with ``num_bits`` long codes for ``num_classes`` classes  and also support warmstarting them. Please check the ``config`` file for more potential parameters.
 
-Base: ```python main.py --config configs/largescale/baselines/resnet50-llc-codebook-learning.yaml --multigpu 0,1,2,3 --save-codebook <path-to-save-codebook>```
+Base: ```python main.py --config configs/largescale/baselines/resnet50-llc-codebook-learning.yaml --multigpu 0,1,2,3 --save-codebook <path-to-save-codebook>```.
 
-Warmstarting codebook: ```python main.py --config configs/largescale/baselines/resnet50-llc-codebook-learning.yaml --multigpu 0,1,2,3 --load-codebook <path-to-warmstart-codebook> --save-codebook <path-to-save-codebook>```
+Warmstarting codebook: ```python main.py --config configs/largescale/baselines/resnet50-llc-codebook-learning.yaml --multigpu 0,1,2,3 --load-codebook <path-to-warmstart-codebook> --save-codebook <path-to-save-codebook>```.
 
 ### Instance Code Learning:
 
 For a given codebook and (pretrained) backbone, instance code learning of ``num_bits`` long bnary codes. Please check the ``config`` file for more potential parameters.
 
-Base: ```python main.py --config configs/largescale/baselines/resnet50-llc-instance-code-learning.yaml --multigpu 0,1,2,3 --instance-code --load-codebook <path-to-saved-codebook> --pretrained <path-to-pretrained-model>```
+Base: ```python main.py --config configs/largescale/baselines/resnet50-llc-instance-code-learning.yaml --multigpu 0,1,2,3 --instance-code --load-codebook <path-to-saved-codebook> --pretrained <path-to-pretrained-model>```.
 
 While the default decoding scheme is set ot ``mhd``, one can change the scheme to ``ed`` by using ``--decode`` flag in the command line.
 
@@ -54,11 +54,11 @@ Instance Code Evaluation: ```python main.py --config configs/largescale/baseline
 ## Pretrained Models
 We provide the ``20-bit`` model trained with ResNet50 backbon on ImageNet-1K according to the settings in the [paper](https://arxiv.org/abs/2106.01487). 
 
-The Class Code Evaluation of the provided pretrained model and codebook should give a top-1 accuracy of ``75.5%``. While the Instance Code Evaluation using ``MHD`` (Minimum Hamming Distance) gives ``74.5%`` and using ``ED`` (Exact Decoding) gives ``68.9%``
+The Class Code Evaluation of the provided pretrained model and codebook should give a top-1 accuracy of ``75.5%``. While the Instance Code Evaluation using ``MHD`` (Minimum Hamming Distance) gives ``74.5%`` and using ``ED`` (Exact Decoding) gives ``68.9%``.
 
-``ResNet50 pretrained backbone projecting to 20 dim space`` - [R50 Pretrained Backbone](https://drive.google.com/file/d/1iAhEKsiT542QXjs3CAxnpE7GhhTvTbfA/view?usp=sharing)
+``ResNet50 pretrained backbone projecting to 20 dim space`` - [R50 Pretrained Backbone](https://drive.google.com/file/d/1iAhEKsiT542QXjs3CAxnpE7GhhTvTbfA/view?usp=sharing).
 
-``Learnt 20-bit codebook`` - [20-bit Codebook](https://drive.google.com/file/d/1s0ezOsdMCfZUvjgp4oCvxtgVQbn5YSST/view?usp=sharing)
+``Learnt 20-bit codebook`` - [20-bit Codebook](https://drive.google.com/file/d/1s0ezOsdMCfZUvjgp4oCvxtgVQbn5YSST/view?usp=sharing).
 
 Note that the codebook is stored with the underlying real-values. We recommend people store it this way and binarize the codebook to ``+1/-1`` for usage in LLC.
 
