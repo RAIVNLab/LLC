@@ -56,7 +56,6 @@ def train(train_loader, model, criterion, optimizer, epoch, args, writer, codebo
             loss = criterion(sig(output), target_code.detach())
         
         losses.update(loss.item(), images.size(0))
-        print(model.state_dict()['module.fc.weight'][0])
         # measure accuracy
         acc1, acc5 = accuracy(output, target, args, codebook=codebook, topk=(1, 5))
         top1.update(acc1, images.size(0))
